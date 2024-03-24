@@ -2,52 +2,38 @@ import React from 'react';
 
 
 
-const AlternatingText = () => {
-    const content = [
-        {
-          title: "Refill.ie Initiative",
-          text: "Refill Ireland is an environmental project to make Irish towns and cities tap water refill friendly for everyone while on the go.",
-          image: "https://via.placeholder.com/150"
-        },
-        {
-          title: "Doolin Tourism",
-          text: "Situated on the Wild Atlantic Way, boasting some of the most breathtaking scenery in Ireland and with a colourful and welcoming village ready to host you during your stay.",
-          image: "https://via.placeholder.com/150"
-        },
-        {
-          title: "Ecotourism & our UNESCO Geopark",
-          text: "We are proud members of the Burren Ecotourism Network, committed to the promotion of responsible tourism that conserves the environment and improves the well-being of local people. We work together to promote ‘The Burren & Cliffs of Moher UNESCO Global Geopark’ as a leading sustainable visitor destination, celebrated for high standards in visitor experience, conservation & learning.",
-          image: "https://via.placeholder.com/150"
-        },
-        {
-          title: "Environmental Policy for Doolin Pantry",
-          text: "The staff and management of the Doolin Pantry are committed to our Environmental Policy and Plan.  This plan aims to reduce our carbon footprint by reducing our water and energy consumption and reducing our waste production and increase our level of recycling further, without impacting on the enjoyment of our customers.",
-          image: "https://via.placeholder.com/150"
-        },
-        {
-          title: "Burren Ecotourism Network",
-          text: "The Burren Ecotourism Network (the B.E.N.) is a membership organisation embedded in a sustainable tourism ethos.  It was formally established in 2011.",
-          image: "https://via.placeholder.com/150"
-        },
-        // Add more objects as needed
-      ];
+const AlternatingText = ({ content }) => {
   
-  var titleAndPara = (title, text) => {
-    return <div className='flex flex-col'>
-      <b>{title}</b>
-      <p>{text}</p>
+  var moreButton = (text, link) => {
+    console.log(text)
+    console.log(link)
+    return <a href={link}>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+        {text}
+      </button>
+    </a>
+    
+  }
+
+  var titleAndPara = (item) => {
+    var buttons = []
+    item.buttons.forEach((bttn) => (
+      buttons.push(moreButton(bttn.text, bttn.link)) 
+    ))
+    return <div className='flex flex-col items-stretch w-2/3'>
+      <b>{item.title}</b>
+      <p className='self-center pt-5'>{item.text}</p>
+      {buttons}
     </div>
   }
   
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mx-auto">
       {content.map((item, i) => (
-        <div className='flex flex-row'>
-          {i % 2 === 0 && titleAndPara(item.title, item.text)}
-          <div>
-            <img src={item.image} alt="default pic" />
-          </div>
-          {i % 2 !== 0 && titleAndPara(item.title, item.text)}
+        <div className='flex justify-center flex-row py-5'>
+          {i % 2 === 0 && titleAndPara(item)}
+          <img className='self-center px-5' src={item.image} alt="default pic" />
+          {i % 2 !== 0 && titleAndPara(item)}
         </div>
       ))}
     </div>
