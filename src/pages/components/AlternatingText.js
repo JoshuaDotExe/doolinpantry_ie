@@ -33,7 +33,7 @@ const AlternatingText = ({ content }) => {
   }
   
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col">
       {content.map((item, i) => (
         <div className='flex justify-center flex-row py-5'>
           {i % 2 === 0 && titleAndPara(item)}

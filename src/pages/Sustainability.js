@@ -41,7 +41,7 @@ const Sustainability = () => {
       ];
 
   return (
-    <div className='grid absolute p-4 text-center h-full content-center'>
+    <div className='grid p-4 text-center h-full content-center'>
       <AlternatingText content={content}></AlternatingText>
     </div>
   )

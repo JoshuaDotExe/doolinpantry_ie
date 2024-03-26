@@ -33,7 +33,7 @@ const Geopark = () => {
       ];
 
   return (
-    <div className='grid absolute h-full p-4 text-center content-center'>
+    <div className='grid h-full p-4 text-center content-center'>
       <AlternatingText content={content}></AlternatingText>
     </div>
   )

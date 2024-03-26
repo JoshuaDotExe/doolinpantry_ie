@@ -38,7 +38,7 @@ const About = () => {
   ];
 
   return (
-    <div className='absolute p-4 text-center'>
+    <div className='flex relative p-4 text-center'>
       <AlternatingText content={content}></AlternatingText>
     </div>
   )
