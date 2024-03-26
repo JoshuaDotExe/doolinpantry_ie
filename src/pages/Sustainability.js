@@ -5,32 +5,43 @@ const Sustainability = () => {
 
     const content = [
         {
-          title: "Environmental Policy",
-          text: "Eiusmod dolor consequat tempor sunt tempor nulla ad amet id aute. Velit laborum occaecat incididunt quis dolore sint nulla est culpa. Pariatur excepteur esse in anim sunt tempor exercitation mollit amet laboris pariatur mollit. Do velit Lorem ea proident labore tempor irure id quis amet laborum. Reprehenderit reprehenderit esse quis ex quis fugiat. Cillum irure quis sit labore elit duis aliquip sint.",
-          image: "https://via.placeholder.com/150",
-          buttons: []
-        },
-        {
-          title: "LNT info-poster of cort?",
-          text: "Eu aute ut laborum consectetur nulla. Fugiat commodo ipsum nulla esse pariatur anim. Duis minim voluptate Lorem incididunt dolor consequat esse. Officia amet tempor incididunt culpa amet cupidatat enim sunt minim ut non id. Qui ea laboris do sunt nostrud et sint ipsum ut eiusmod est. Do fugiat sit proident anim cupidatat. Consequat occaecat eiusmod cupidatat nostrud sint et ea et dolor in esse.",
-          image: "https://via.placeholder.com/150",
-          buttons: []
-        },
-        {
-          title: "Local Bus Routes",
-          text: "Bus Eireann's 350 route passes through a number of towns along the Co. Clare coastline going from Ennis to Galway.",
-          image: "https://via.placeholder.com/150",
+          title: "Leave No Trace",
+          text: "We are committed to following the Leave No Trace principles to minimize our environmental impact and promote sustainable practices. Our efforts to reduce our environmental impact are outlined in our environmental policy. The staff and management of the Doolin Pantry are committed to our Environmental Policy and Plan.  This plan aims to reduce our carbon footprint by reducing our water and energy consumption and reducing our waste production and increase our level of recycling further, without impacting on the enjoyment of our customers.",
+          image: process.env.PUBLIC_URL + "LNT_Logo.png",
           buttons: [
             {
-                text: "More...",
-                link: "https://www.buseireann.ie/inner.php?id=406&form-view-timetables-from=&form-view-timetables-to=&form-view-timetables-route=350&form-view-timetables-submit=1"
+              text: "Our Certification",
+              link: process.env.PUBLIC_URL + "/LNT_cert.pdf"
+            },
+            {
+              text: "Our Eco Policy",
+              link: process.env.PUBLIC_URL + "/env_policy.pdf"
+            },
+            {
+              text: "Leave No Trace Ireland",
+              link: "https://www.leavenotraceireland.org/education/education-introduction/"
+            }
+          ]
+        },
+        {
+          title: "Our Local Area and Transport",
+          text: "There are a number of public transport options available to navigate the area. Bus Eireann's 350 route passes through a number of towns along the Co. Clare coastline going from Ennis to Galway, including our hometown Doolin! Doolin is situated on the Wild Atlantic Way, boasting some of the most breathtaking scenery in Ireland and with a colourful and welcoming village ready to host you during your stay.",
+          image: process.env.PUBLIC_URL + "/Doolin_Logo.jpg",
+          buttons: [
+            {
+                text: "Transport Options",
+                link: "https://www.burrengeopark.ie/discover-explore/transport-options/"
+            },
+            {
+              text: "Doolin",
+              link: "https://doolin.ie/"
             },
           ]
         },
       ];
 
   return (
-    <div className='absolute p-4 text-center'>
+    <div className='grid absolute p-4 text-center h-full content-center'>
       <AlternatingText content={content}></AlternatingText>
     </div>
   )
