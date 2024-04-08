@@ -6,15 +6,11 @@ const Contact = () => {
       <section class="">
         <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-700">Contact Us</h2>
-            <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 text-xl">Thank you for visiting! We hope that you have found what you needed on our website. If not, please feel free to contact us using any of the methods below!</p>
+            <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 text-xl">Thank you for visiting! We hope that you have found what you needed on our website. If not, please feel free to contact us using our email address below!</p>
             <div class="space-y-8">
               <div className='flex flex-row justify-center'>
                 <div class="block mb-2 text-m font-medium text-gray-700"><b>Our Email : </b></div>
-                <div class="block pl-5 mb-2 text-m font-medium text-gray-700">testemailaddress@test.test</div>
-              </div>
-              <div className='flex flex-row justify-center'>
-                <div class="block mb-2 text-m font-medium text-gray-700"><b>Another Email : </b></div>
-                <div class="block pl-5 mb-2 text-m font-medium text-gray-700">testemailaddress@test.test</div>
+                <div class="block pl-5 mb-2 text-m font-medium text-gray-700">karen@stonecutterskitchen.com</div>
               </div>
             </div>
         </div>

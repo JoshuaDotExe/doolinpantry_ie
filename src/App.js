@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 
 import Home from "./pages/Home"
-import About from "./pages/About"
 import Geopark from "./pages/Geopark"
 import Sustainability from "./pages/Sustainability"
 import Contact from "./pages/Contact"
@@ -18,7 +17,6 @@ function App() {
       <main className='flex h-full relative overflow-y-auto no-scrollbar'>
           <Routes>
             <Route exact path="/" element={<Home/>} />
-            <Route path="/about" element={<About/>} />
             <Route path="/sustainability" element={<Sustainability/>} />
             <Route path="/geopark" element={<Geopark/>} />
             <Route path="/contact" element={<Contact/>} />

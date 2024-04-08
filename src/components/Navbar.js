@@ -25,10 +25,6 @@ const Navbar = () => {
             text : "Geopark"
         },
         {
-            link : "/about",
-            text : "About"
-        },
-        {
             link : "/contact",
             text : "Contact"
         }
