@@ -3,6 +3,9 @@ import React from 'react'
 const Home = () => {
     return (
         <div className='flex flex-col text-center w-full items-center'>
+          <div className='pt-20 w-2/3'>
+            <iframe width="100%" height="500rem" src="https://www.youtube.com/embed/G2dWVNYMpoI?si=cZ3ga9nN40ELu-BK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
           <div className='flex flex-row w-2/3 py-10'>
             <div className='w-1/2 px-5'>
               <h1><b>Where did our recipe for brown soda bread come from?</b></h1>
